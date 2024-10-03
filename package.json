@@ -1,0 +1,16 @@
+{
+  "name": "playwright-api",
+  "version": "1.0.0",
+  "description": "playwright api practice repo",
+  "main": "index.js",
+  "scripts": {
+    "test:api": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4"
+  }
+}
