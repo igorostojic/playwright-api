@@ -18,6 +18,19 @@ test.describe("POST request", () => {
     expect(responseBody.createdAt).toBeTruthy();
   });
 
+  test("update existing candidate information", async function ({ request }) {
+    const response = await request.put(`${Utils.baseUrl}/users/888`, {
+      data: {
+        first_name: "Api Updated",
+        last_name: "Test Updated",
+      },
+    });
+    const responseBody = JSON.parse(await response.text());
+
+    expect(response.status()).toBe(200);
+    expect(responseBody.first_name).toBe("Api Updated");
+  });
+
   test("remove created candidate", async function ({ request }) {
     const response = await request.delete(`${Utils.baseUrl}/users/888`);
 
