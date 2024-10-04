@@ -2,10 +2,10 @@ import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
   testDir: "tests/api",
-  outputDir: "./results",
+  outputDir: "results/",
   fullyParallel: true,
   retries: 1,
-  reporter: "html",
+  reporter: [["html", { outputFolder: "html-report/" }]],
   timeout: 30000,
   use: {
     trace: "on-first-retry",
