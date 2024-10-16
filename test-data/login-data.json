@@ -1,0 +1,6 @@
+{
+  "validEmailAddress": "eve.holt@reqres.in",
+  "validPassword": "cityslicka",
+  "invalidEmailAddress": "testing.api@yopmail.com",
+  "invalidPassword": "password"
+}
